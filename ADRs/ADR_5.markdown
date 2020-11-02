@@ -4,9 +4,13 @@
 Pending
 
 ## Context
-To avoid connection problems with the database and allow access from scalable number of lambdas, as well as to avoid problems caused by DB belonging to a separate virtual private cloud, DB cache is to be used. 
 
+Each API request requires some data from the Data Cache and to perform some processing of this data per request.
 
 ## Decision
 
+We decided to use lamda functions to process each separate request in order.
+
 ## Consequence
+
+This will allow to incrementally add new endpoints while being able to update and test each path independently.
