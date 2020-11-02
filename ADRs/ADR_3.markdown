@@ -1,10 +1,9 @@
 # 3. External events/updates will all be normalized before entering API Gateway
 
 ## Status
-Pending
+Accepted
 
 ## Context
-
 ![Image of Context](https://github.com/tactlessowls/tactless-architecture/blob/main/ADRs/images/imageSource3.PNG)
 
 Multiple external APIs require separate flows to process data. 
