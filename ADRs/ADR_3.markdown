@@ -1,18 +1,16 @@
 # 3. External events/updates will all be normalized before entering API Gateway
 
 ## Status
-Accepted
+Pending
 
 ## Context
-![Image of Context](https://github.com/sebfault/architecure-kata-sandbox/blob/master/ADRs/images/imageSource3.PNG)
 
-Lambdas that operate beside API Gateways have the same internal object model. 
+ Multiple external APIs require separate flows to process data. 
 
 ## Decision
 
-Since there can be multiple sources of events and information for inventory data, we have decided to add a seperate process to normalize all input date.
-Having this separate process will ensure consistency throught the other pipelines 
+We decided to use lambda functions to normalize the data from different systems, before being processed into our storage and servers. For each external API data, we will have a lambda function that will receive the data and transform this data into our data model.
+
 ## Consequence
 
-Since we are adding another process in the input flow, care must be used in the implementation of the normalization process as to not introduce bottlenecks. 
-Proper use of lambda functions should add address this. 
+This approach will allows us to process data from different sources seemlessly, allowing each individual lamda to be updated and tested independently. 
