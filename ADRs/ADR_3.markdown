@@ -5,6 +5,8 @@ Pending
 
 ## Context
 
+Lambdas that operate beside API Gateways have the same internal object model. 
+
 ## Decision
 
 ## Consequence
