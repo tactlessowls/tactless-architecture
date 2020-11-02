@@ -4,7 +4,7 @@
 Accepted
 
 ## Context
-![Image of Context](https://github.com/sebfault/architecure-kata-sandbox/blob/master/ADRs/images/imageSource2.PNG)
+![Image of Context](https://github.com/tactlessowls/tactless-architecture/blob/main/ADRs/images/imageSource2.PNG)
 
 ## Decision
 For those of the API that support subscription based model, we have decided to have queu service that will subscrube to events. These events are fed into data processing where the data is transformed to common model and send down the pipe
