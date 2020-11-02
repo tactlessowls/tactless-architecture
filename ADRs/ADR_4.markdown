@@ -1,16 +1,18 @@
-# 3. API Gateway will be utilized to handle request handling and communication to different entities
+# 4. API Gateway will be utilized to handle request handling and communication to different entities
 
 ## Status
 Pending
 
 ## Context
-There are 3 differententry points communicating with data in the system:
-- Usage by Centarl Kitchen to request or update fridge contents;
-- Usage by a customer buying a meal;
-- Usage by an internet user handling their subscription details.
-
-Therefore, 3 different API Gateways handling authorisation are needed, so that logic responsible for different flows is logically separated.
+There are 3 different entry points communicating with data in the system:
+- Centarl Kitchen accessing/managing item data
+- Customers accessing item data
+- Updates that are received from external systems/APIs
 
 ## Decision
 
+We decided to have separete API Gateways for each of these points of access, ensuring that authentication/authorization is separated by default.
+
 ## Consequence
+
+System will have different concerns regarding access and security for the aforemention access points.
