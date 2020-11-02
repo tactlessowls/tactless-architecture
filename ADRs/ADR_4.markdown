@@ -18,4 +18,4 @@ We decided to have separete API Gateways for each of these points of access, ens
 ## Consequence
 
 System will have different concerns regarding access and security for the aforemention access points.
-Care must be made in implementation of these endpoints as to not to duplicate logic and concerns.
+Care must be made in implementation of these endpoints as not to duplicate logic and concerns.
